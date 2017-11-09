@@ -13,19 +13,18 @@ $(document).ready(function(){
         Xdata.push(id);
         if(Xdata.length==3){
           if(winner(Xdata)){
-            alert("X WON");
-            reload=confirm("Do you want to play again");
-            if(reload){
-            window.location.reload(true);
-          }
-
+            setTimeout(function(){
+              $("#win_msg").text("X WON THE GAME");
+            },1000);
           }
         }else if(Xdata.length>3){
 
           let win=check_winner(sub_array(Xdata.sort()));
 
           if(win){
-            alert("X WON")
+            setTimeout(function(){
+              $("#win_msg").text("X WON THE GAME");
+          },1000)
           }
 
         }
@@ -37,12 +36,9 @@ $(document).ready(function(){
         Odata.push(id);
         if(Odata.length==3){
           if(winner(Odata)){
-            alert("O WON");
-              reload=confirm("Do you want to play again");
-            if(reload){
-            window.location.reload(true);
-          }
-
+            setTimeout(function(){
+              $("#win_msg").text("O WON THE GAME");
+            },1000)
           }
 
         }
@@ -51,7 +47,9 @@ $(document).ready(function(){
           let win=check_winner(sub_array(Odata.sort()));
 
           if(win){
-            alert("O WON")
+            setTimeout(function(){
+              $("#win_msg").text("O WON THE GAME ");
+            },1000)
           }
 
         }
@@ -59,7 +57,6 @@ $(document).ready(function(){
 
     })
     function winner(arr){
-      
      let data=arr.sort().join('');
     for(let prop in win_combo){
 
@@ -68,10 +65,12 @@ $(document).ready(function(){
       }
     }
     }
-
     function sub_array(arr){
       let slice_Arr=[];
-      slice_Arr.unshift(arr.slice(0,3),arr.slice(1),arr.slice(0,1).concat(arr.slice(2)),arr.slice(0,2).concat(arr.slice(3)));
+      slice_Arr.unshift(
+        arr.slice(0,3),arr.slice(1),
+        arr.slice(0,1).concat(arr.slice(2)),
+        arr.slice(0,2).concat(arr.slice(3)));
       return slice_Arr;
     }
     function check_winner(arr){
@@ -85,6 +84,11 @@ $(document).ready(function(){
       }
 
     }
+
+    $("#ask").click(function(){
+      window.location.reload(true);
+    })
+    
 
   })
   
