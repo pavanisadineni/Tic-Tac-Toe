@@ -1,5 +1,5 @@
 
-  let counter=0;
+ let counter=0;
 let Xdata=[];
 let Odata=[];
 let win_combo={1:"012",2:"345",3:"678",4:"036",5:"147",6:"258",7:"048",8:"246"};
