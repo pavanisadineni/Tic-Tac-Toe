@@ -38,7 +38,7 @@ h1 {
 }
 #ask:hover{
 background-color: lightblue;
-border:2px solid white;
+border:2px solid grey;
 }
 #cont{
 display: flex;
