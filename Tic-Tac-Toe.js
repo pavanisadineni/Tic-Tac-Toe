@@ -23,7 +23,7 @@ $(document).ready(function(){
 
           if(win){
             setTimeout(function(){
-              $("#win_msg").text("X WON THE GAME");
+              $("#win_msg").text("X WON THE GAME :)");
           },1000)
           }
 
@@ -37,7 +37,7 @@ $(document).ready(function(){
         if(Odata.length==3){
           if(winner(Odata)){
             setTimeout(function(){
-              $("#win_msg").text("O WON THE GAME");
+              $("#win_msg").text("O WON THE GAME :)");
             },1000)
           }
 
