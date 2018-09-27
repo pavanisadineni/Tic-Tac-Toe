@@ -1,5 +1,5 @@
 
-  let counter=0;
+ let counter=0;
 let Xdata=[];
 let Odata=[];
 let win_combo={1:"012",2:"345",3:"678",4:"036",5:"147",6:"258",7:"048",8:"246"};
@@ -23,7 +23,11 @@ $(document).ready(function(){
 
           if(win){
             setTimeout(function(){
+<<<<<<< HEAD
               $("#game").text("X WON THE GAME");
+=======
+              $("#win_msg").text("X WON THE GAME :)");
+>>>>>>> 0d8d4b9c59307dc7480bf2c5c55c000fcf6da152
           },1000)
           }
 
@@ -37,7 +41,11 @@ $(document).ready(function(){
         if(Odata.length==3){
           if(winner(Odata)){
             setTimeout(function(){
+<<<<<<< HEAD
               $("#game").text("O WON THE GAME");
+=======
+              $("#win_msg").text("O WON THE GAME :)");
+>>>>>>> 0d8d4b9c59307dc7480bf2c5c55c000fcf6da152
             },1000)
           }
 
